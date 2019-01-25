@@ -16,7 +16,12 @@ componentDidUpdate() {
   }
 
   //Your code here
-
+  shouldComponentUpdate(nextState) {
+    if (this.state.time === nextState.time) {
+      return false
+    }
+    return true
+  }
 
 
   componentDidMount() {
